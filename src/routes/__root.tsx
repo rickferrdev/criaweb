@@ -5,6 +5,7 @@ import {
 	Scripts,
 } from "@tanstack/react-router";
 import appCss from "../styles.css?url";
+import { ThemeProvider } from "@/components/common/Theme/Provider";
 
 interface RouterContent {
 	queryClient: QueryClient;
@@ -81,9 +82,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				</script>
 			</head>
 			<body className="bg-background text-foreground selection:bg-primary/20 selection:text-primary flex min-h-screen flex-col antialiased">
-				{children}
+				<ThemeProvider>
+					{children}
+				</ThemeProvider>
 				<Scripts />
 			</body>
 		</html>
 	);
 }
+

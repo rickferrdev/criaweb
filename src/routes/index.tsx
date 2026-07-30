@@ -64,7 +64,7 @@ function RouteComponent() {
 	return (
 		<div
 			id={scrollContainerId}
-			className="h-screen w-full overflow-y-auto overflow-x-hidden snap-y snap-proximity md:snap-none bg-slate-50 text-slate-900 font-sans selection:bg-emerald-100 selection:text-emerald-900 relative scroll-smooth"
+			className="h-screen w-full overflow-y-auto overflow-x-hidden snap-y snap-proximity md:snap-none bg-background text-foreground font-sans selection:bg-emerald-100 selection:text-emerald-900 relative scroll-smooth"
 		>
 			<ScrollRail />
 			<ScrollToTop />
