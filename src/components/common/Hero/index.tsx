@@ -9,6 +9,7 @@ import {
 	User,
 } from "lucide-react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export type AnimationPhase = "typing" | "menu" | "clicking" | "applied";
 
@@ -118,6 +119,7 @@ export const AnimatedHeroText = ({
 };
 
 export const WebsiteBuilderCard = ({ step }: { step: number }) => {
+	const { t } = useTranslation();
 	const isStep1 = step >= 0;
 	const isStep2 = step >= 1;
 	const isStep3 = step >= 2;
@@ -125,7 +127,7 @@ export const WebsiteBuilderCard = ({ step }: { step: number }) => {
 
 	const projects = [
 		{
-			title: "Meu Portfolio Pessoal",
+			title: t("hero.showcase.projects.personal_portfolio"),
 			icon: User,
 			bgIcon: "bg-emerald-100 dark:bg-emerald-950/40",
 			textIcon: "text-emerald-600 dark:text-emerald-450",
@@ -134,10 +136,11 @@ export const WebsiteBuilderCard = ({ step }: { step: number }) => {
 			hoverShadow: "hover:shadow-emerald-900/15 dark:hover:shadow-transparent",
 			skelBase: "bg-emerald-100 dark:bg-emerald-950/30",
 			skelHighlight: "bg-emerald-200 dark:bg-emerald-900/30",
-			skelGradient: "from-emerald-500/20 to-teal-500/20 dark:from-emerald-500/10 dark:to-teal-500/10",
+			skelGradient:
+				"from-emerald-500/20 to-teal-500/20 dark:from-emerald-500/10 dark:to-teal-500/10",
 		},
 		{
-			title: "Loja de Roupas Online",
+			title: t("hero.showcase.projects.clothing_store"),
 			icon: ShoppingBag,
 			bgIcon: "bg-teal-100 dark:bg-teal-950/40",
 			textIcon: "text-teal-600 dark:text-teal-450",
@@ -146,10 +149,11 @@ export const WebsiteBuilderCard = ({ step }: { step: number }) => {
 			hoverShadow: "hover:shadow-teal-900/15 dark:hover:shadow-transparent",
 			skelBase: "bg-teal-100 dark:bg-teal-950/30",
 			skelHighlight: "bg-teal-200 dark:bg-teal-900/30",
-			skelGradient: "from-teal-500/20 to-emerald-500/20 dark:from-teal-500/10 dark:to-emerald-500/10",
+			skelGradient:
+				"from-teal-500/20 to-emerald-500/20 dark:from-teal-500/10 dark:to-emerald-500/10",
 		},
 		{
-			title: "Dashboard Sistema ERP",
+			title: t("hero.showcase.projects.erp_dashboard"),
 			icon: BarChart3,
 			bgIcon: "bg-green-100 dark:bg-green-950/40",
 			textIcon: "text-green-600 dark:text-green-450",
@@ -158,10 +162,11 @@ export const WebsiteBuilderCard = ({ step }: { step: number }) => {
 			hoverShadow: "hover:shadow-green-900/15 dark:hover:shadow-transparent",
 			skelBase: "bg-green-100 dark:bg-green-950/30",
 			skelHighlight: "bg-green-200 dark:bg-green-900/30",
-			skelGradient: "from-green-500/20 to-emerald-500/20 dark:from-green-500/10 dark:to-emerald-500/10",
+			skelGradient:
+				"from-green-500/20 to-emerald-500/20 dark:from-green-500/10 dark:to-emerald-500/10",
 		},
 		{
-			title: "Blog de Viagens",
+			title: t("hero.showcase.projects.travel_blog"),
 			icon: Plane,
 			bgIcon: "bg-lime-100 dark:bg-lime-950/40",
 			textIcon: "text-lime-600 dark:text-lime-450",
@@ -170,7 +175,8 @@ export const WebsiteBuilderCard = ({ step }: { step: number }) => {
 			hoverShadow: "hover:shadow-lime-900/15 dark:hover:shadow-transparent",
 			skelBase: "bg-lime-100 dark:bg-lime-950/30",
 			skelHighlight: "bg-lime-200 dark:bg-lime-900/30",
-			skelGradient: "from-lime-500/20 to-green-500/20 dark:from-lime-500/10 dark:to-green-500/10",
+			skelGradient:
+				"from-lime-500/20 to-green-500/20 dark:from-lime-500/10 dark:to-green-500/10",
 		},
 	];
 
@@ -317,6 +323,7 @@ export const HeroBackground = () => (
 );
 
 export const FloatingCursors = ({ phase }: { phase: AnimationPhase }) => {
+	const { t } = useTranslation();
 	const isApplied = phase === "applied" || phase === "clicking";
 
 	const color1 = isApplied
@@ -349,7 +356,7 @@ export const FloatingCursors = ({ phase }: { phase: AnimationPhase }) => {
 				<div
 					className={`text-[10px] font-bold px-2 py-0.5 rounded-full ml-6 -mt-2 shadow-sm border transition-colors duration-700 ${bg1}`}
 				>
-					Visitante
+					{t("hero.roles.visitor")}
 				</div>
 			</div>
 			<div
@@ -367,7 +374,7 @@ export const FloatingCursors = ({ phase }: { phase: AnimationPhase }) => {
 				<div
 					className={`text-[10px] font-bold px-2 py-0.5 rounded-full ml-5 -mt-2 shadow-sm border transition-colors duration-700 ${bg2}`}
 				>
-					Cliente
+					{t("hero.roles.client")}
 				</div>
 			</div>
 			<div
@@ -390,57 +397,63 @@ export const HeroContent = ({
 }: {
 	phase: AnimationPhase;
 	setPhase: (p: AnimationPhase) => void;
-}) => (
-	<div className="max-w-2xl">
-		<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-bold mb-8 shadow-xl shadow-emerald-900/5 dark:shadow-transparent">
-			<span className="relative flex h-3 w-3">
-				<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-				<span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-			</span>
-			Disponível para desenvolver suas ideias
-		</div>
+}) => {
+	const { t } = useTranslation();
 
-		<h1 className="text-5xl lg:text-[4.8rem] font-black tracking-tight text-slate-900 dark:text-white mb-16 lg:mb-20 leading-[1.05] z-30 relative">
-			Crie um site que <AnimatedHeroText phase={phase} setPhase={setPhase} />
-		</h1>
-
-		<p className="text-lg lg:text-xl text-slate-600 dark:text-slate-300 mb-10 leading-relaxed max-w-xl font-medium">
-			Desenvolvo sites de alta performance, com design impecável e totalmente
-			responsivos, focados em capturar a atenção do seu público e escalar o seu
-			negócio.
-		</p>
-
-		<div className="flex flex-wrap items-center gap-4">
-			<Link
-				to="/"
-				hash="contact"
-				className="group flex items-center gap-2 px-8 py-4.5 bg-linear-to-r from-emerald-500 to-green-600 text-white rounded-full font-bold text-lg hover:from-emerald-600 hover:to-green-700 transition-all shadow-xl shadow-emerald-600/30 hover:shadow-2xl hover:shadow-emerald-600/40 hover:-translate-y-1 active:translate-y-0"
-			>
-				Iniciar meu projeto
-				<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-			</Link>
-			<Link
-				to="/"
-				hash="portfolio"
-				className="px-8 py-4.5 bg-white dark:bg-transparent text-slate-700 dark:text-slate-200 border-2 border-slate-200 dark:border-emerald-500/30 rounded-full font-bold text-lg hover:bg-slate-50 dark:hover:bg-emerald-500/5 hover:border-slate-300 dark:hover:border-emerald-500/60 transition-all hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-transparent"
-			>
-				Ver portfólio
-			</Link>
-		</div>
-
-		<div className="mt-12 flex flex-wrap items-center gap-6 text-sm font-bold text-slate-600 dark:text-slate-400">
-			<div className="flex items-center gap-2">
-				<CheckCircle2 className="w-5 h-5 text-emerald-500" /> Entrega Rápida
+	return (
+		<div className="max-w-2xl">
+			<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-bold mb-8 shadow-xl shadow-emerald-900/5 dark:shadow-transparent">
+				<span className="relative flex h-3 w-3">
+					<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+					<span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+				</span>
+				{t("hero.available")}
 			</div>
-			<div className="flex items-center gap-2">
-				<CheckCircle2 className="w-5 h-5 text-teal-500" /> Qualidade Premium
+
+			<h1 className="text-5xl lg:text-[4.8rem] font-black tracking-tight text-slate-900 dark:text-white mb-16 lg:mb-20 leading-[1.05] z-30 relative">
+				{t("hero.title")}
+				<AnimatedHeroText phase={phase} setPhase={setPhase} />
+			</h1>
+
+			<p className="text-lg lg:text-xl text-slate-600 dark:text-slate-300 mb-10 leading-relaxed max-w-xl font-medium">
+				{t("hero.description")}
+			</p>
+
+			<div className="flex flex-wrap items-center gap-4">
+				<Link
+					to="/"
+					hash="contact"
+					className="group flex items-center gap-2 px-8 py-4.5 bg-linear-to-r from-emerald-500 to-green-600 text-white rounded-full font-bold text-lg hover:from-emerald-600 hover:to-green-700 transition-all shadow-xl shadow-emerald-600/30 hover:shadow-2xl hover:shadow-emerald-600/40 hover:-translate-y-1 active:translate-y-0"
+				>
+					{t("hero.actions.start")}
+					<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+				</Link>
+				<Link
+					to="/"
+					hash="portfolio"
+					className="px-8 py-4.5 bg-white dark:bg-transparent text-slate-700 dark:text-slate-200 border-2 border-slate-200 dark:border-emerald-500/30 rounded-full font-bold text-lg hover:bg-slate-50 dark:hover:bg-emerald-500/5 hover:border-slate-300 dark:hover:border-emerald-500/60 transition-all hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-transparent"
+				>
+					{t("hero.actions.view_portfolio")}
+				</Link>
 			</div>
-			<div className="flex items-center gap-2">
-				<CheckCircle2 className="w-5 h-5 text-green-500" /> Otimizado para SEO
+
+			<div className="mt-12 flex flex-wrap items-center gap-6 text-sm font-bold text-slate-600 dark:text-slate-400">
+				<div className="flex items-center gap-2">
+					<CheckCircle2 className="w-5 h-5 text-emerald-500" />{" "}
+					{t("hero.badges.fast_delivery")}
+				</div>
+				<div className="flex items-center gap-2">
+					<CheckCircle2 className="w-5 h-5 text-teal-500" />{" "}
+					{t("hero.badges.premium_quality")}
+				</div>
+				<div className="flex items-center gap-2">
+					<CheckCircle2 className="w-5 h-5 text-green-500" />{" "}
+					{t("hero.badges.seo_optimized")}
+				</div>
 			</div>
 		</div>
-	</div>
-);
+	);
+};
 
 export const HeroShowcase = () => {
 	const sequence = [0, 1, 2, 3];
