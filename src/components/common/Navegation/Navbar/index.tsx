@@ -1,27 +1,30 @@
 import { Link } from "@tanstack/react-router";
 import { Zap } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "#/components/ui/button";
 import { ModeToggle } from "../../Theme/Toggle";
 
-const btns = [
-	{
-		label: "Soluções",
-		to: "/",
-		hash: "solutions",
-	},
-	{
-		label: "Casos de Uso",
-		to: "/",
-		hash: "use-cases",
-	},
-	{
-		label: "Contato",
-		to: "/",
-		hash: "contact",
-	},
-];
-
 export const Navbar = () => {
+	const { t } = useTranslation();
+
+	const btns = [
+		{
+			label: t("navbar.links.solutions"),
+			to: "/",
+			hash: "solutions",
+		},
+		{
+			label: t("navbar.links.use_cases"),
+			to: "/",
+			hash: "use-cases",
+		},
+		{
+			label: t("navbar.links.contact"),
+			to: "/",
+			hash: "contact",
+		},
+	];
+
 	return (
 		<nav className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between relative z-50">
 			<div className="flex items-center gap-1.5 sm:gap-2 font-black text-xl sm:text-2xl tracking-tighter text-foreground shrink-0">
@@ -49,7 +52,7 @@ export const Navbar = () => {
 							</Link>
 						}
 						variant={"link"}
-						type="button"
+						nativeButton={false}
 						className="px-4 py-2 text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-muted rounded-full transition-colors cursor-pointer"
 					/>
 				))}
@@ -60,9 +63,10 @@ export const Navbar = () => {
 					size={"lg"}
 					render={
 						<Link to="/" hash="contact">
-							Fazer Orçamento
+							{t("navbar.actions.quote")}
 						</Link>
 					}
+					nativeButton={false}
 					className="relative px-6 h-10 sm:h-11 bg-slate-900 dark:bg-emerald-500 text-white dark:text-slate-950 rounded-full text-xs sm:text-sm font-bold shadow-lg shadow-slate-900/20 dark:shadow-emerald-500/10 transition-all hover:bg-slate-800 dark:hover:bg-emerald-400 hover:scale-105 active:scale-95 flex items-center justify-center cursor-pointer"
 				/>
 				<ModeToggle />
