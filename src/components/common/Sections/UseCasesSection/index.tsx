@@ -23,6 +23,7 @@ import {
 	Zap,
 } from "lucide-react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { HeroBackground } from "../../Hero";
 import { InlineBadge } from "../../InlineBadge";
 
@@ -33,6 +34,7 @@ const NotificationChaos = ({
 	status: "idle" | "playing" | "revealed";
 	setStatus: (s: "revealed") => void;
 }) => {
+	const { t } = useTranslation();
 	const [activeCount, setActiveCount] = React.useState(0);
 
 	React.useEffect(() => {
@@ -63,92 +65,92 @@ const NotificationChaos = ({
 
 	const messages = [
 		{
-			text: "Tem produto X?",
+			text: t("use_cases.chaos_messages.product_x"),
 			icon: MessageSquare,
 			pos: "top-[10%] left-[5%] md:left-[10%]",
 		},
 		{
-			text: "Qual o preço do Y?",
+			text: t("use_cases.chaos_messages.price_y"),
 			icon: MessageCircle,
 			pos: "top-[15%] right-[5%] md:right-[15%]",
 		},
 		{
-			text: "Ainda tem no estoque?",
+			text: t("use_cases.chaos_messages.in_stock"),
 			icon: AlertCircle,
 			pos: "top-[25%] left-[2%] md:left-[20%]",
 		},
 		{
-			text: "Faz desconto?",
+			text: t("use_cases.chaos_messages.discount"),
 			icon: ShoppingBag,
 			pos: "top-[30%] right-[2%] md:right-[25%]",
 		},
 		{
-			text: "Valor do frete?",
+			text: t("use_cases.chaos_messages.shipping_cost"),
 			icon: Plane,
 			pos: "top-[40%] left-[10%] md:left-[30%]",
 		},
 		{
-			text: "Envia hoje?",
+			text: t("use_cases.chaos_messages.send_today"),
 			icon: Clock,
 			pos: "top-[45%] right-[10%] md:right-[20%]",
 		},
 		{
-			text: "Aceita PIX?",
+			text: t("use_cases.chaos_messages.accepts_pix"),
 			icon: Zap,
 			pos: "top-[55%] left-[5%] md:left-[40%]",
 		},
 		{
-			text: "Oi, tá disponível?",
+			text: t("use_cases.chaos_messages.available"),
 			icon: User,
 			pos: "top-[60%] right-[15%] md:right-[45%]",
 		},
 		{
-			text: "Qual a garantia?",
+			text: t("use_cases.chaos_messages.warranty"),
 			icon: HelpCircle,
 			pos: "top-[70%] left-[8%] md:left-[15%]",
 		},
 		{
-			text: "Tem na cor verde?",
+			text: t("use_cases.chaos_messages.green_color"),
 			icon: Palette,
 			pos: "top-[75%] right-[5%] md:right-[30%]",
 		},
 		{
-			text: "Onde vejo as medidas?",
+			text: t("use_cases.chaos_messages.measures"),
 			icon: Search,
 			pos: "top-[85%] left-[12%] md:left-[25%]",
 		},
 		{
-			text: "Como rastreio?",
+			text: t("use_cases.chaos_messages.tracking"),
 			icon: MapPin,
 			pos: "top-[90%] right-[12%] md:right-[15%]",
 		},
 		{
-			text: "Vocês têm loja física?",
+			text: t("use_cases.chaos_messages.physical_store"),
 			icon: Store,
 			pos: "top-[20%] left-[30%] md:left-[40%]",
 		},
 		{
-			text: "Faz parceria?",
+			text: t("use_cases.chaos_messages.partnership"),
 			icon: Handshake,
 			pos: "top-[35%] right-[30%] md:right-[10%]",
 		},
 		{
-			text: "Pode embalar pra presente?",
+			text: t("use_cases.chaos_messages.gift_wrap"),
 			icon: Gift,
 			pos: "top-[50%] left-[40%] md:left-[5%]",
 		},
 		{
-			text: "Quero devolver",
+			text: t("use_cases.chaos_messages.return"),
 			icon: ArrowLeftCircle,
 			pos: "top-[65%] right-[40%] md:right-[5%]",
 		},
 		{
-			text: "Minha compra não chegou",
+			text: t("use_cases.chaos_messages.not_delivered"),
 			icon: Frown,
 			pos: "top-[80%] left-[30%] md:left-[50%]",
 		},
 		{
-			text: "Não consigo comprar",
+			text: t("use_cases.chaos_messages.cannot_buy"),
 			icon: XCircle,
 			pos: "top-[12%] right-[40%] md:right-[35%]",
 		},
@@ -185,6 +187,7 @@ const NotificationChaos = ({
 };
 
 export const UseCasesSection = () => {
+	const { t } = useTranslation();
 	const [status, setStatus] = React.useState<"idle" | "playing" | "revealed">(
 		"idle",
 	);
@@ -224,12 +227,14 @@ export const UseCasesSection = () => {
 			>
 				<div className="max-w-3xl mx-auto text-center mb-16 sm:mb-20">
 					<h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-4 sm:mb-6">
-						Quando o sucesso vira <span className="text-emerald-500">caos</span>
+						{t("use_cases.title_part1")}
+						<span className="text-emerald-500">
+							{t("use_cases.title_part2")}
+						</span>
 						.
 					</h2>
 					<p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-						Crescer é ótimo, mas atender dezenas de pessoas manualmente tem
-						limite. Veja o que acontece sem automação:
+						{t("use_cases.description")}
 					</p>
 				</div>
 
@@ -239,23 +244,22 @@ export const UseCasesSection = () => {
 							<MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-500" />
 						</div>
 						<h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">
-							O Caos do WhatsApp
+							{t("use_cases.whatsapp.title")}
 						</h3>
 						<p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed sm:leading-loose font-medium">
-							Seus pedidos não param, e você passa o dia inteiro respondendo se
-							a{" "}
+							{t("use_cases.whatsapp.desc_1")}{" "}
 							<InlineBadge color="pink" icon={Shirt}>
-								Camiseta
+								{t("use_cases.whatsapp.badge_tshirt")}
 							</InlineBadge>{" "}
-							está disponível na cor{" "}
+							{t("use_cases.whatsapp.desc_2")}{" "}
 							<InlineBadge color="emerald" icon={Palette}>
-								Verde
+								{t("use_cases.whatsapp.badge_green")}
 							</InlineBadge>{" "}
-							ou{" "}
+							{t("use_cases.whatsapp.desc_3")}{" "}
 							<InlineBadge color="rose" icon={Palette}>
-								Rosa
+								{t("use_cases.whatsapp.badge_pink")}
 							</InlineBadge>
-							. Um e-commerce trabalha e vende por você 24h por dia.
+							{t("use_cases.whatsapp.desc_4")}
 						</p>
 					</div>
 
@@ -264,15 +268,14 @@ export const UseCasesSection = () => {
 							<CalendarClock className="w-5 h-5 sm:w-6 sm:h-6 text-violet-500" />
 						</div>
 						<h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">
-							Agendamentos Manuais
+							{t("use_cases.scheduling.title")}
 						</h3>
 						<p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 leading-loose sm:leading-[2.2] md:leading-loose font-medium">
-							Você perde horas cruzando horários na agenda enquanto o cliente
-							espera confirmação. Um{" "}
+							{t("use_cases.scheduling.desc_1")}{" "}
 							<InlineBadge color="violet" icon={CalendarClock}>
-								Sistema Inteligente
+								{t("use_cases.scheduling.badge_system")}
 							</InlineBadge>{" "}
-							cruza dados e confirma tudo sozinho.
+							{t("use_cases.scheduling.desc_2")}
 						</p>
 					</div>
 
@@ -280,19 +283,18 @@ export const UseCasesSection = () => {
 						<div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.15)_0%,transparent_60%)] pointer-events-none transition-transform group-hover:scale-110 duration-1000"></div>
 						<div className="relative z-10 max-w-2xl">
 							<h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">
-								A Síndrome da Desconfiança
+								{t("use_cases.trust.title")}
 							</h3>
 							<p className="text-base sm:text-lg md:text-xl text-slate-300 leading-loose sm:leading-[2.2] md:leading-loose font-medium">
-								O cliente vê seu anúncio, procura sua marca no Google, não acha
-								um site profissional e acaba comprando do{" "}
+								{t("use_cases.trust.desc_1")}{" "}
 								<InlineBadge color="red" icon={TrendingDown}>
-									Concorrente
+									{t("use_cases.trust.badge_competitor")}
 								</InlineBadge>
-								. Uma{" "}
+								{t("use_cases.trust.desc_2")}{" "}
 								<InlineBadge color="blue" icon={MonitorSmartphone}>
-									Plataforma Web Premium
+									{t("use_cases.trust.badge_premium")}
 								</InlineBadge>{" "}
-								transmite autoridade imediata.
+								{t("use_cases.trust.desc_3")}
 							</p>
 						</div>
 					</div>
