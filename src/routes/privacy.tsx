@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ShieldCheck } from "lucide-react";
-import { Footer } from "../components/common/Layout/Footer";
+import { Footer } from "@/components/common/Layout/Footer";
 
 export const Route = createFileRoute("/privacy")({
 	component: Privacidade,

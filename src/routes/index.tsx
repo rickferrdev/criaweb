@@ -23,34 +23,34 @@ export const Route = createFileRoute("/")({
 			{
 				name: "description",
 				content:
-					"Diga adeus ao trabalho manual. Soluções completas de automação e páginas focadas em conversão para seu negócio vender 24h por dia.",
+					"Diga adeus ao trabalho manual. Soluções completas de automação, sistemas inteligentes e plataformas web sob medida para escalar seu faturamento.",
 			},
 			{
 				name: "keywords",
 				content:
-					"criação de sites, automação, marketing, landing page, conversão, vendas online",
+					"sistemas web, automação comercial, desenvolvimento sob medida, integração de sistemas, plataformas digitais, conversão, vendas online",
 			},
-			{ property: "og:title", content: "CriaWeb - Máquina de Vendas" },
+			{ property: "og:title", content: "CriaWeb - Sistemas & Automação" },
 			{
 				property: "og:description",
 				content:
-					"Construa o sistema autônomo perfeito para escalar seu faturamento sem limites.",
+					"Construa ecossistemas digitais e automações inteligentes sob medida para escalar seu faturamento.",
 			},
 			{ property: "og:type", content: "website" },
-			{ property: "og:image", content: "/favicon.png" },
-			{ property: "og:image:alt", content: "CriaWeb Logo" },
-			{ property: "og:url", content: "https://criaweb.vercel.app" },
+			{ property: "og:image", content: "https://criaweb-rickferrdev.vercel.app/banner.png" },
+			{ property: "og:image:alt", content: "Banner CriaWeb" },
+			{ property: "og:url", content: "https://criaweb-rickferrdev.vercel.app" },
 			{ name: "twitter:card", content: "summary_large_image" },
 			{
 				name: "twitter:title",
-				content: "CriaWeb - Acelere Suas Vendas no Piloto Automático",
+				content: "CriaWeb - Sistemas Web & Automações sob Medida",
 			},
 			{
 				name: "twitter:description",
 				content:
-					"Diga adeus ao trabalho manual. Soluções completas de automação e páginas focadas em conversão.",
+					"Diga adeus ao trabalho manual. Soluções completas de automação, sistemas inteligentes e plataformas web de alta conversão.",
 			},
-			{ name: "twitter:image", content: "/favicon.png" },
+			{ name: "twitter:image", content: "/banner.png" },
 			{ name: "author", content: "Henrick Ferreira Saraiva" },
 			{ name: "robots", content: "index, follow" },
 		],
@@ -61,7 +61,6 @@ function RouteComponent() {
 	const [phase, setPhase] = useState<AnimationPhase>("typing");
 	const heroId = "hero";
 	const scrollContainerId = "main-scroll-container";
-
 	return (
 		<div
 			id={scrollContainerId}
@@ -69,12 +68,10 @@ function RouteComponent() {
 		>
 			<ScrollRail />
 			<ScrollToTop />
-
 			<div className="snap-start snap-always relative w-full flex flex-col justify-center min-h-screen">
 				<HeroBackground />
 				<FloatingCursors phase={phase} />
 				<Navbar />
-
 				<main
 					id={heroId}
 					className="container mx-auto px-6 pt-12 pb-24 lg:pt-20 lg:pb-32 relative z-10 grow flex items-center"
@@ -85,7 +82,6 @@ function RouteComponent() {
 					</div>
 				</main>
 			</div>
-
 			<UseCasesSection />
 			<SolutionFeaturesSection />
 			<CallToActionSection />
