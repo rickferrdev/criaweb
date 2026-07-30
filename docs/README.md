@@ -1,6 +1,6 @@
 <div align="center">
   <h1>CriaWeb 🍏💚🍋‍🟩</h1>
-  <img src="./banner.png" alt="CriaWeb Banner" width="100%" />
+  <img src="../public/banner.png" alt="CriaWeb Banner" width="100%" />
   <p><strong>Vision, Services, and Portfolio by Henr. Ferreira Saraiva</strong></p>
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
