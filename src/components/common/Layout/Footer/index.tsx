@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { Zap } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+	const { t } = useTranslation();
 	const currentYear = new Date().getFullYear();
 
 	const sectionId = "footer";
@@ -24,8 +26,7 @@ export const Footer = () => {
 							</span>
 						</div>
 						<p className="text-slate-400 text-lg leading-relaxed max-w-sm mb-6">
-							Transformando negócios comuns em máquinas de vendas automatizadas
-							de alta conversão.
+							{t("footer.description")}
 						</p>
 						<div className="flex flex-col gap-2 text-slate-400 font-medium">
 							<a
@@ -38,20 +39,22 @@ export const Footer = () => {
 								href="https://wa.me/5585989600081"
 								className="hover:text-emerald-400 transition-colors"
 							>
-								WhatsApp: (85) 98960-0081
+								{t("footer.contact.whatsapp")}
 							</a>
 						</div>
 					</div>
 
 					<div>
-						<h4 className="text-white font-bold mb-6 text-lg">Navegação</h4>
+						<h4 className="text-white font-bold mb-6 text-lg">
+							{t("footer.sections.navigation.title")}
+						</h4>
 						<ul className="flex flex-col gap-4">
 							<li>
 								<Link
 									to="/"
 									className="text-slate-400 hover:text-emerald-400 transition-colors"
 								>
-									Início
+									{t("footer.sections.navigation.home")}
 								</Link>
 							</li>
 							<li>
@@ -60,7 +63,7 @@ export const Footer = () => {
 									hash="use-cases"
 									className="text-slate-400 hover:text-emerald-400 transition-colors"
 								>
-									Casos de Uso
+									{t("footer.sections.navigation.use_cases")}
 								</Link>
 							</li>
 							<li>
@@ -69,21 +72,23 @@ export const Footer = () => {
 									hash="solutions"
 									className="text-slate-400 hover:text-emerald-400 transition-colors"
 								>
-									Benefícios
+									{t("footer.sections.navigation.benefits")}
 								</Link>
 							</li>
 						</ul>
 					</div>
 
 					<div>
-						<h4 className="text-white font-bold mb-6 text-lg">Legal</h4>
+						<h4 className="text-white font-bold mb-6 text-lg">
+							{t("footer.sections.legal.title")}
+						</h4>
 						<ul className="flex flex-col gap-4">
 							<li>
 								<Link
 									to="/terms"
 									className="text-slate-400 hover:text-emerald-400 transition-colors"
 								>
-									Termos de Uso
+									{t("footer.sections.legal.terms")}
 								</Link>
 							</li>
 							<li>
@@ -91,7 +96,7 @@ export const Footer = () => {
 									to="/privacy"
 									className="text-slate-400 hover:text-emerald-400 transition-colors"
 								>
-									Política de Privacidade
+									{t("footer.sections.legal.privacy")}
 								</Link>
 							</li>
 							<li>
@@ -99,7 +104,7 @@ export const Footer = () => {
 									to="/license"
 									className="text-slate-400 hover:text-emerald-400 transition-colors"
 								>
-									Licença Comercial
+									{t("footer.sections.legal.license")}
 								</Link>
 							</li>
 						</ul>
@@ -107,16 +112,9 @@ export const Footer = () => {
 				</div>
 
 				<div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-					<p>
-						© {currentYear} Henr. (Henrick) Ferreira Saraiva. Todos os direitos
-						reservados.
-					</p>
+					<p>{t("footer.copyright", { year: currentYear })}</p>
 					<p className="text-center md:text-right max-w-xl text-xs md:text-sm">
-						Este design, layout e código estrutural são propriedades
-						intelectuais protegidas por direitos autorais para uso comercial
-						exclusivo. É terminantemente proibida a cópia, reprodução,
-						distribuição ou uso por terceiros de qualquer material deste site
-						sem autorização prévia por escrito.
+						{t("footer.disclaimer")}
 					</p>
 				</div>
 			</div>
