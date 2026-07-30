@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { ModeToggle } from "../Toggle";
 
 export type ThemeMode = "light" | "dark" | "system";
 
