@@ -165,16 +165,16 @@ const NotificationChaos = ({
 				{messages.map((msg, idx) => (
 					<div
 						key={`msg-${msg.text}`}
-						className={`absolute bg-white px-4 py-2.5 rounded-2xl shadow-xl shadow-red-900/15 border border-slate-200 flex items-center gap-3 transition-all duration-300 transform ${msg.pos} ${
+						className={`absolute bg-white dark:bg-slate-800 px-4 py-2.5 rounded-2xl shadow-xl shadow-red-900/15 dark:shadow-transparent border border-slate-200 dark:border-slate-700 flex items-center gap-3 transition-all duration-300 transform ${msg.pos} ${
 							activeCount > idx
 								? "opacity-100 translate-y-0 scale-100"
 								: "opacity-0 translate-y-8 scale-50"
 						}`}
 					>
-						<div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
-							<msg.icon className="w-4 h-4 text-slate-500" />
+						<div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center shrink-0">
+							<msg.icon className="w-4 h-4 text-slate-500 dark:text-slate-200" />
 						</div>
-						<div className="text-[13px] font-bold text-slate-700 whitespace-nowrap">
+						<div className="text-[13px] font-bold text-slate-700 dark:text-white whitespace-nowrap">
 							{msg.text}
 						</div>
 					</div>
@@ -212,7 +212,7 @@ export const UseCasesSection = () => {
 		<section
 			id={sectionId}
 			ref={sectionRef}
-			className="snap-start snap-always w-full bg-slate-50 py-20 sm:py-24 relative z-20 border-t border-slate-200 overflow-hidden min-h-225"
+			className="snap-start snap-always w-full bg-background py-20 sm:py-24 relative z-20 border-t border-border overflow-hidden min-h-225"
 		>
 			<HeroBackground />
 			{status !== "revealed" && (
@@ -223,25 +223,25 @@ export const UseCasesSection = () => {
 				className={`container mx-auto px-4 sm:px-6 relative z-10 transition-all duration-1000 ${status !== "revealed" ? "blur-xl opacity-20 pointer-events-none" : "blur-0 opacity-100"}`}
 			>
 				<div className="max-w-3xl mx-auto text-center mb-16 sm:mb-20">
-					<h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4 sm:mb-6">
+					<h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-4 sm:mb-6">
 						Quando o sucesso vira <span className="text-emerald-500">caos</span>
 						.
 					</h2>
-					<p className="text-base sm:text-lg md:text-xl text-slate-600 font-medium leading-relaxed">
+					<p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
 						Crescer é ótimo, mas atender dezenas de pessoas manualmente tem
 						limite. Veja o que acontece sem automação:
 					</p>
 				</div>
 
 				<div className="grid md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
-					<div className="bg-slate-50 p-6 sm:p-8 md:p-10 rounded-4xl sm:rounded-4xl border border-slate-100 hover:shadow-xl transition-shadow shadow-sm group">
-						<div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+					<div className="bg-slate-50 dark:bg-slate-900/40 p-6 sm:p-8 md:p-10 rounded-4xl sm:rounded-4xl border border-slate-100 dark:border-slate-800/60 hover:shadow-xl transition-shadow shadow-sm group">
+						<div className="w-10 h-10 sm:w-12 sm:h-12 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
 							<MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-500" />
 						</div>
-						<h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 sm:mb-4">
+						<h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">
 							O Caos do WhatsApp
 						</h3>
-						<p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed sm:leading-loose font-medium">
+						<p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed sm:leading-loose font-medium">
 							Seus pedidos não param, e você passa o dia inteiro respondendo se
 							a{" "}
 							<InlineBadge color="pink" icon={Shirt}>
@@ -259,14 +259,14 @@ export const UseCasesSection = () => {
 						</p>
 					</div>
 
-					<div className="bg-slate-50 p-6 sm:p-8 md:p-10 rounded-4xl sm:rounded-4xl border border-slate-100 hover:shadow-xl transition-shadow shadow-sm group">
-						<div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+					<div className="bg-slate-50 dark:bg-slate-900/40 p-6 sm:p-8 md:p-10 rounded-4xl sm:rounded-4xl border border-slate-100 dark:border-slate-800/60 hover:shadow-xl transition-shadow shadow-sm group">
+						<div className="w-10 h-10 sm:w-12 sm:h-12 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
 							<CalendarClock className="w-5 h-5 sm:w-6 sm:h-6 text-violet-500" />
 						</div>
-						<h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 sm:mb-4">
+						<h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">
 							Agendamentos Manuais
 						</h3>
-						<p className="text-sm sm:text-base md:text-lg text-slate-600 leading-loose sm:leading-[2.2] md:leading-loose font-medium">
+						<p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 leading-loose sm:leading-[2.2] md:leading-loose font-medium">
 							Você perde horas cruzando horários na agenda enquanto o cliente
 							espera confirmação. Um{" "}
 							<InlineBadge color="violet" icon={CalendarClock}>
