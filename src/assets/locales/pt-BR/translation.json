@@ -1,0 +1,156 @@
+{
+	"navbar": {
+		"links": {
+			"solutions": "Soluções",
+			"use_cases": "Casos de Uso",
+			"contact": "Contato"
+		},
+		"actions": {
+			"quote": "Fazer Orçamento"
+		}
+	},
+	"hero": {
+		"available": "Disponível para desenvolver suas ideias",
+		"title": "Crie um site que ",
+		"description": "Desenvolvo sites de alta performance, com design impecável e totalmente responsivos, focados em capturar a atenção do seu público e escalar o seu negócio.",
+		"actions": {
+			"start": "Iniciar meu projeto",
+			"view_portfolio": "Ver portfólio"
+		},
+		"badges": {
+			"fast_delivery": "Entrega Rápida",
+			"premium_quality": "Qualidade Premium",
+			"seo_optimized": "Otimizado para SEO"
+		},
+		"roles": {
+			"visitor": "Visitante",
+			"client": "Cliente"
+		},
+		"showcase": {
+			"projects": {
+				"personal_portfolio": "Meu Portfolio Pessoal",
+				"clothing_store": "Loja de Roupas Online",
+				"erp_dashboard": "Dashboard Sistema ERP",
+				"travel_blog": "Blog de Viagens"
+			}
+		}
+	},
+	"use_cases": {
+		"chaos_messages": {
+			"product_x": "Tem produto X?",
+			"price_y": "Qual o preço do Y?",
+			"in_stock": "Ainda tem no estoque?",
+			"discount": "Faz desconto?",
+			"shipping_cost": "Valor do frete?",
+			"send_today": "Envia hoje?",
+			"accepts_pix": "Aceita PIX?",
+			"available": "Oi, tá disponível?",
+			"warranty": "Qual a garantia?",
+			"green_color": "Tem na cor verde?",
+			"measures": "Onde vejo as medidas?",
+			"tracking": "Como rastreio?",
+			"physical_store": "Vocês têm loja física?",
+			"partnership": "Faz parceria?",
+			"gift_wrap": "Pode embalar pra presente?",
+			"return": "Quero devolver",
+			"not_delivered": "Minha compra não chegou",
+			"cannot_buy": "Não consigo comprar"
+		},
+		"title_part1": "Quando o sucesso vira ",
+		"title_part2": "caos",
+		"description": "Crescer é ótimo, mas atender dezenas de pessoas manualmente tem limite. Veja o que acontece sem automação:",
+		"whatsapp": {
+			"title": "O Caos do WhatsApp",
+			"badge_tshirt": "Camiseta",
+			"badge_green": "Verde",
+			"badge_pink": "Rosa",
+			"desc_1": "Seus pedidos não param, e você passa o dia inteiro respondendo se a",
+			"desc_2": "está disponível na cor",
+			"desc_3": "ou",
+			"desc_4": ". Um e-commerce trabalha e vende por você 24h por dia."
+		},
+		"scheduling": {
+			"title": "Agendamentos Manuais",
+			"badge_system": "Sistema Inteligente",
+			"desc_1": "Você perde horas cruzando horários na agenda enquanto o cliente espera confirmação. Um",
+			"desc_2": "cruza dados e confirma tudo sozinho."
+		},
+		"trust": {
+			"title": "A Síndrome da Desconfiança",
+			"badge_competitor": "Concorrente",
+			"badge_premium": "Plataforma Web Premium",
+			"desc_1": "O cliente vê seu anúncio, procura sua marca no Google, não acha um site profissional e acaba comprando do",
+			"desc_2": ". Uma",
+			"desc_3": "transmite autoridade imediata."
+		}
+	},
+	"solutions": {
+		"interactions": {
+			"green_color": "Tem na cor verde?",
+			"green_added": "Sim! Adicionado.",
+			"schedule_tomorrow": "Agendar pra amanhã",
+			"confirmed_14h": "14h confirmado.",
+			"accepts_pix": "Vocês aceitam PIX?",
+			"pix_generated": "PIX gerado.",
+			"shipping_cost": "Valor do frete?",
+			"free_shipping": "Frete grátis.",
+			"measures": "Onde vejo medidas?",
+			"guide_opened": "Guia aberto.",
+			"not_delivered": "Não chegou",
+			"out_for_delivery": "Saiu para entrega."
+		},
+		"title_part1": "Sua Nova ",
+		"title_part2": "Máquina de Vendas",
+		"description": "Como resolvemos o caos do dia a dia combinando estratégia comercial, tecnologia moderna e design inteligente.",
+		"autopilot": {
+			"title": "Venda no Piloto Automático",
+			"description": "Diga adeus a passar o dia inteiro respondendo preços. Sistemas inteligentes e fluxos automatizados que fecham vendas 24h por dia, sem você precisar intervir.",
+			"badge_sale": "Venda!",
+			"buy_now": "Comprar Agora"
+		},
+		"speed": {
+			"title": "Velocidade e Alcance",
+			"description": "Com tecnologia de ponta, seu site carrega em milissegundos. O Google te ranqueia melhor e você alcança muito mais pessoas."
+		},
+		"authority": {
+			"title": "Autoridade Imediata",
+			"description": "Design visual premium e adaptável transmite o nível de profissionalismo que elimina qualquer desconfiança."
+		},
+		"systems": {
+			"title": "Sistemas Autônomos",
+			"description": "Seu site agendando horários, cruzando estoques e capturando métricas sozinho através de integrações estratégicas e código otimizado."
+		}
+	},
+	"cta": {
+		"badge": "O próximo passo",
+		"title_part1": "Pronto para transformar seu negócio em uma ",
+		"title_part2": "máquina de vendas?",
+		"description": "Pare de perder vendas por não conseguir atender todo mundo. Vamos construir o sistema autônomo perfeito para escalar seu faturamento sem limites.",
+		"actions": {
+			"talk": "Vamos Conversar",
+			"email": "Enviar E-mail"
+		}
+	},
+	"footer": {
+		"description": "Transformando negócios comuns em máquinas de vendas automatizadas de alta conversão.",
+		"contact": {
+			"whatsapp": "WhatsApp: (85) 98960-0081"
+		},
+		"sections": {
+			"navigation": {
+				"title": "Navegação",
+				"home": "Início",
+				"use_cases": "Casos de Uso",
+				"benefits": "Benefícios"
+			},
+			"legal": {
+				"title": "Legal",
+				"terms": "Termos de Uso",
+				"privacy": "Política de Privacidade",
+				"license": "Licença Comercial"
+			}
+		},
+		"copyright": "© {year} Henr. (Henrick) Ferreira Saraiva. Todos os direitos reservados.",
+		"disclaimer": "Este design, layout e código estrutural são propriedades intelectuais protegidas por direitos autorais para uso comercial exclusivo. É terminantemente proibida a cópia, reprodução, distribuição ou uso por terceiros de qualquer material deste site sem autorização prévia por escrito."
+	}
+}
