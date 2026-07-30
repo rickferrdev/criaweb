@@ -290,7 +290,7 @@ export const UseCasesSection = () => {
 								</InlineBadge>
 								. Uma{" "}
 								<InlineBadge color="blue" icon={MonitorSmartphone}>
-									Landing Page Premium
+									Plataforma Web Premium
 								</InlineBadge>{" "}
 								transmite autoridade imediata.
 							</p>

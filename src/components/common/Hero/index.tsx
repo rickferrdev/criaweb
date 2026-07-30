@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import {
 	ArrowRight,
 	BarChart3,
@@ -30,10 +31,9 @@ export const AnimatedHeroText = ({
 				setText("");
 				setPhase("typing");
 
-				// Reduz o atraso inicial no primeiro carregamento para não parecer "engasgado"
 				await new Promise((r) => setTimeout(r, isFirstRun ? 150 : 1000));
 				isFirstRun = false;
-				
+
 				if (isCancelled) break;
 
 				for (let i = 1; i <= fullText.length; i++) {
@@ -411,19 +411,21 @@ export const HeroContent = ({
 		</p>
 
 		<div className="flex flex-wrap items-center gap-4">
-			<a
-				href="#contact"
+			<Link
+				to="/"
+				hash="contact"
 				className="group flex items-center gap-2 px-8 py-4.5 bg-linear-to-r from-emerald-500 to-green-600 text-white rounded-full font-bold text-lg hover:from-emerald-600 hover:to-green-700 transition-all shadow-xl shadow-emerald-600/30 hover:shadow-2xl hover:shadow-emerald-600/40 hover:-translate-y-1 active:translate-y-0"
 			>
 				Iniciar meu projeto
 				<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-			</a>
-			<a
-				href="#portfolio"
+			</Link>
+			<Link
+				to="/"
+				hash="portfolio"
 				className="px-8 py-4.5 bg-white text-slate-700 border-2 border-slate-200 rounded-full font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all hover:shadow-lg hover:shadow-slate-200/50"
 			>
 				Ver portfólio
-			</a>
+			</Link>
 		</div>
 
 		<div className="mt-12 flex flex-wrap items-center gap-6 text-sm font-bold text-slate-600">

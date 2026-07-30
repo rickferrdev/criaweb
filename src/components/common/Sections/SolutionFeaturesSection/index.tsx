@@ -262,9 +262,9 @@ export const SolutionFeaturesSection = () => {
 								Venda no Piloto Automático
 							</h3>
 							<p className="text-sm sm:text-base text-slate-600 font-medium">
-								Diga adeus a passar o dia inteiro respondendo preços. Páginas
-								focadas em conversão que fecham vendas 24h por dia, sem você
-								precisar intervir.
+								Diga adeus a passar o dia inteiro respondendo preços. Sistemas
+								inteligentes e fluxos automatizados que fecham vendas 24h por
+								dia, sem você precisar intervir.
 							</p>
 						</div>
 					</div>

@@ -47,28 +47,30 @@ export const Footer = () => {
 						<h4 className="text-white font-bold mb-6 text-lg">Navegação</h4>
 						<ul className="flex flex-col gap-4">
 							<li>
-								<a
-									href="/"
+								<Link
+									to="/"
 									className="text-slate-400 hover:text-emerald-400 transition-colors"
 								>
 									Início
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="/"
+								<Link
+									to="/"
+									hash="use-cases"
 									className="text-slate-400 hover:text-emerald-400 transition-colors"
 								>
 									Casos de Uso
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="/"
+								<Link
+									to="/"
+									hash="solutions"
 									className="text-slate-400 hover:text-emerald-400 transition-colors"
 								>
 									Benefícios
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
