@@ -37,7 +37,10 @@ export const Route = createFileRoute("/")({
 					"Construa ecossistemas digitais e automações inteligentes sob medida para escalar seu faturamento.",
 			},
 			{ property: "og:type", content: "website" },
-			{ property: "og:image", content: "https://criaweb-rickferrdev.vercel.app/banner.png" },
+			{
+				property: "og:image",
+				content: "https://criaweb-rickferrdev.vercel.app/banner.png",
+			},
 			{ property: "og:image:alt", content: "Banner CriaWeb" },
 			{ property: "og:url", content: "https://criaweb-rickferrdev.vercel.app" },
 			{ name: "twitter:card", content: "summary_large_image" },

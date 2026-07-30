@@ -4,8 +4,9 @@ import {
 	HeadContent,
 	Scripts,
 } from "@tanstack/react-router";
-import appCss from "../styles.css?url";
 import { ThemeProvider } from "@/components/common/Theme/Provider";
+import "@/lib/i18n";
+import appCss from "../styles.css?url";
 
 interface RouterContent {
 	queryClient: QueryClient;
@@ -82,12 +83,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				</script>
 			</head>
 			<body className="bg-background text-foreground selection:bg-primary/20 selection:text-primary flex min-h-screen flex-col antialiased">
-				<ThemeProvider>
-					{children}
-				</ThemeProvider>
+				<ThemeProvider>{children}</ThemeProvider>
 				<Scripts />
 			</body>
 		</html>
 	);
 }
-
