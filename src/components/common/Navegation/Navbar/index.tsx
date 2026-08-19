@@ -9,6 +9,11 @@ export const Navbar = () => {
 
 	const btns = [
 		{
+			label: "Ver ideias grátis",
+			to: "/templates",
+			hash: undefined,
+		},
+		{
 			label: t("navbar.links.solutions"),
 			to: "/",
 			hash: "solutions",

@@ -13,6 +13,8 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as SplatRouteImport } from './routes/$'
 import { Route as LicenseRouteImport } from './routes/license'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as TemplateRouteImport } from './routes/template'
+import { Route as TemplatesRouteImport } from './routes/templates'
 import { Route as TermsRouteImport } from './routes/terms'
 
 const IndexRoute = IndexRouteImport.update({
@@ -35,6 +37,16 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TemplateRoute = TemplateRouteImport.update({
+  id: '/template',
+  path: '/template',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TemplatesRoute = TemplatesRouteImport.update({
+  id: '/templates',
+  path: '/templates',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -46,6 +58,8 @@ export interface FileRoutesByFullPath {
   '/$': typeof SplatRoute
   '/license': typeof LicenseRoute
   '/privacy': typeof PrivacyRoute
+  '/template': typeof TemplateRoute
+  '/templates': typeof TemplatesRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +67,8 @@ export interface FileRoutesByTo {
   '/$': typeof SplatRoute
   '/license': typeof LicenseRoute
   '/privacy': typeof PrivacyRoute
+  '/template': typeof TemplateRoute
+  '/templates': typeof TemplatesRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
@@ -61,14 +77,26 @@ export interface FileRoutesById {
   '/$': typeof SplatRoute
   '/license': typeof LicenseRoute
   '/privacy': typeof PrivacyRoute
+  '/template': typeof TemplateRoute
+  '/templates': typeof TemplatesRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$' | '/license' | '/privacy' | '/terms'
+  fullPaths:
+    '/' | '/$' | '/license' | '/privacy' | '/template' | '/templates' | '/terms'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$' | '/license' | '/privacy' | '/terms'
-  id: '__root__' | '/' | '/$' | '/license' | '/privacy' | '/terms'
+  to:
+    '/' | '/$' | '/license' | '/privacy' | '/template' | '/templates' | '/terms'
+  id:
+    | '__root__'
+    | '/'
+    | '/$'
+    | '/license'
+    | '/privacy'
+    | '/template'
+    | '/templates'
+    | '/terms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +104,8 @@ export interface RootRouteChildren {
   SplatRoute: typeof SplatRoute
   LicenseRoute: typeof LicenseRoute
   PrivacyRoute: typeof PrivacyRoute
+  TemplateRoute: typeof TemplateRoute
+  TemplatesRoute: typeof TemplatesRoute
   TermsRoute: typeof TermsRoute
 }
 
@@ -109,6 +139,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/template': {
+      id: '/template'
+      path: '/template'
+      fullPath: '/template'
+      preLoaderRoute: typeof TemplateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/templates': {
+      id: '/templates'
+      path: '/templates'
+      fullPath: '/templates'
+      preLoaderRoute: typeof TemplatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -124,6 +168,8 @@ const rootRouteChildren: RootRouteChildren = {
   SplatRoute: SplatRoute,
   LicenseRoute: LicenseRoute,
   PrivacyRoute: PrivacyRoute,
+  TemplateRoute: TemplateRoute,
+  TemplatesRoute: TemplatesRoute,
   TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport

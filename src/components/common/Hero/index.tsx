@@ -6,6 +6,7 @@ import {
 	MousePointer2,
 	Plane,
 	ShoppingBag,
+	Sparkles,
 	User,
 } from "lucide-react";
 import React from "react";
@@ -429,11 +430,11 @@ export const HeroContent = ({
 					<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
 				</Link>
 				<Link
-					to="/"
-					hash="portfolio"
-					className="px-8 py-4.5 bg-white dark:bg-transparent text-slate-700 dark:text-slate-200 border-2 border-slate-200 dark:border-emerald-500/30 rounded-full font-bold text-lg hover:bg-slate-50 dark:hover:bg-emerald-500/5 hover:border-slate-300 dark:hover:border-emerald-500/60 transition-all hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-transparent"
+					to="/templates"
+					className="flex items-center gap-2 px-8 py-4.5 bg-white dark:bg-transparent text-slate-700 dark:text-slate-200 border-2 border-slate-200 dark:border-emerald-500/30 rounded-full font-bold text-lg hover:bg-slate-50 dark:hover:bg-emerald-500/5 hover:border-slate-300 dark:hover:border-emerald-500/60 transition-all hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-transparent"
 				>
-					{t("hero.actions.view_portfolio")}
+					<Sparkles className="size-5 text-emerald-500" />
+					Ver ideias grátis!
 				</Link>
 			</div>
 

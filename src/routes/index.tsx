@@ -41,6 +41,8 @@ export const Route = createFileRoute("/")({
 				property: "og:image",
 				content: "https://criaweb-rickferrdev.vercel.app/banner.png",
 			},
+			{ property: "og:image:width", content: "1672" },
+			{ property: "og:image:height", content: "941" },
 			{ property: "og:image:alt", content: "Banner CriaWeb" },
 			{ property: "og:url", content: "https://criaweb-rickferrdev.vercel.app" },
 			{ name: "twitter:card", content: "summary_large_image" },
